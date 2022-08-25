@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const dotenv = require('dotenv');
 const path = require('path');
+const bodyparser = require('body-parser')
 
 const connetDB = require('./server/database/connection')
 
@@ -19,6 +20,8 @@ connetDB()
 
 // parse request by express.json() instead of body-parser
 app.use(express.json());
+// parse request to body-parser
+app.use(bodyparser.urlencoded({ extended : true}))
 
 // set view engine
 app.set("view engine", "ejs")
