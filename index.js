@@ -20,6 +20,9 @@ connetDB()
 // parse request by express.json() instead of body-parser
 app.use(express.json());
 
+// set view engine
+app.set("view engine", "ejs")
+// app.set("views", path.resolve(__dirname, "views"))
 
 // load assets
 app.use('/css', express.static(path.resolve(__dirname, "assets/css")))
@@ -28,6 +31,8 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 
 // load routers
 app.use('/', require('./server/routes/ArticleRoute'))
+var usersRouter = require('./server/routes/UserRoute');
+app.use('/users', usersRouter);
 
 
 app.listen(PORT, ()=> {
