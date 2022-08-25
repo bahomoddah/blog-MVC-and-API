@@ -1,0 +1,24 @@
+{
+  "name": "blog-MVC-crud",
+  "version": "1.0.0",
+  "description": "Blog MVC crud by Express and Mongoose",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "Blog",
+    "nodejs",
+    "express",
+    "mongoose",
+    "monogDB"
+  ],
+  "author": "bahomoddah",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.3",
+    "morgan": "^1.10.0"
+  }
+}
