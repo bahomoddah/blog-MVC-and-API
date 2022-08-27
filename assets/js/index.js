@@ -1,6 +1,3 @@
-
-
-
 $("#add_article").submit(function(event){
     alert("Data Inserted Successfully!");
 })
@@ -14,7 +11,6 @@ $("#update_article").submit(function(event){
     $.map(unindexed_array, function(n, i){
         data[n['name']] = n['value']
     })
-
 
     var request = {
         "url" : `http://localhost:3000/api/articles/${data.id}`,
