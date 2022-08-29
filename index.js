@@ -33,7 +33,8 @@ app.use('/img', express.static(path.resolve(__dirname, "assets/images")))
 app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 
 // load routers
-app.use('/', require('./server/routes/ArticleRoute'))
+app.use('/', require('./server/routes/index'))
+app.use('/articles', require('./server/routes/ArticleRoute'))
 var usersRouter = require('./server/routes/UserRoute');
 app.use('/users', usersRouter);
 
