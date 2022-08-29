@@ -1,7 +1,7 @@
 {
-  "name": "blog-MVC-crud",
+  "name": "blog-MVC-and-API",
   "version": "1.0.0",
-  "description": "Blog MVC crud by Express and Mongoose",
+  "description": "Blog MVC and API by Express and Mongoose",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js"

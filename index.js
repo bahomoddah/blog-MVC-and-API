@@ -4,19 +4,19 @@ const dotenv = require('dotenv');
 const path = require('path');
 const bodyparser = require('body-parser')
 
-const connetDB = require('./server/database/connection')
 
 // create express app
 const app = express();
+
+// mongodb connection
+const connetDB = require('./server/database/connection')
+connetDB()
 
 dotenv.config( { path : '.env'} );
 const PORT = process.env.PORT || 8080;
 
 // log requests
 app.use(morgan('tiny'));
-
-// mongodb connection
-connetDB()
 
 // parse request by express.json() instead of body-parser
 app.use(express.json());
@@ -29,7 +29,7 @@ app.set("view engine", "ejs")
 
 // load assets
 app.use('/css', express.static(path.resolve(__dirname, "assets/css")))
-app.use('/img', express.static(path.resolve(__dirname, "assets/images")))
+app.use('/imgs', express.static(path.resolve(__dirname, "assets/imgs")))
 app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 
 // load routers
