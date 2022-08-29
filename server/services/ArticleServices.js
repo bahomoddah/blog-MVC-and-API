@@ -1,9 +1,10 @@
 const axios = require('axios');
 
-
 exports.articlesRoutes = (req, res) => {
     // Make a get request to /api/articles
-    axios.get('http://localhost:3000/articles/get-data')
+    // const fullUrl =  req.protocol + '://' + req.get('host') + req.originalUrl;
+    const fullUrl = req.protocol + '://' + req.get('host');
+    axios.get(`${fullUrl}/articles/get-data`)
         .then((response) => {
             res.render('articles', {
                 articles: response.data
@@ -15,7 +16,8 @@ exports.articlesRoutes = (req, res) => {
 }
 
 exports.articlesTable = (req, res) => {
-    axios.get('http://localhost:3000/articles/get-data')
+    const fullUrl = req.protocol + '://' + req.get('host');
+    axios.get(`${fullUrl}/articles/get-data`)
         .then((response) => {
             res.render('articles/table', {
                 articles: response.data
