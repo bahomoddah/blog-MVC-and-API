@@ -4,59 +4,27 @@
 <main id="site-main">
   <div class="container">
     <div class="box-nav d-flex justify-between">
-      <a href="/add-article" class="border-shadow">
-        <span class="text-gradient"
-          >New article <i class="fas fa-user"></i
-        ></span>
+      <a href="articles/add-article" class="border-shadow">
+        <span class="text-gradient">New article </span>
       </a>
     </div>
-    <form action="/" method="POST">
-      <table class="table">
-        <thead class="thead-dark">
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Content</th>
-            <th>Image</th>
-            <th>Status</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% for(var i = 0; i < articles.length; i++) { %>
-          <tr>
-            <td><%= i + 1 %></td>
-            <td><%= articles[i].title %></td>
-            <td><%= articles[i].author %></td>
-            <td><%= articles[i].content %></td>
-            <td>
-              <img
-                src="<%= articles[i].imgUrl %>"
-                width="40"
-                height="40"
-                alt=""
-              />
-            </td>
-            <td><%= articles[i].status %></td>
-            <td>
-              <a
-                href="/articles/update-article?id=<%= articles[i]._id%>"
-                class="btn border-shadow update"
-              >
-                <span class="text-gradient"
-                  ><i class="fas fa-pencil-alt"></i
-                ></span>
-              </a>
-              <a class="btn border-shadow delete" data-id="<%= articles[i]._id%>">
-                <span class="text-gradient"><i class="fas fa-times"></i></span>
-              </a>
-            </td>
-          </tr>
-          <% } %>
-        </tbody>
-      </table>
-    </form>
+    <div class="artciles">
+      <% for(var i = 0; i < articles.length; i++) { %>
+      <div class="artciles-box">
+        <div class="image">
+          <img
+            src="<%= articles[i].imgUrl %>"
+            width="100"
+            height="150"
+            alt=""
+          />
+        </div>
+        <h3><%= articles[i].title %></h3>
+        <small><i class="fas fa-user"></i><%= articles[i].author %></small>
+        <p><%= articles[i].content %></p>
+      </div>
+      <% } %>
+    </div>
   </div>
 </main>
 

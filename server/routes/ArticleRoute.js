@@ -6,6 +6,8 @@ const ArticleController = require('../controllers/ArticleController');
 
 router.get('/', ArticleServices.articlesRoutes);
 
+router.get('/table', ArticleServices.articlesTable);
+
 router.get('/add-article', ArticleServices.add_article)
 
 router.get('/update-article', ArticleServices.update_article)

@@ -1,34 +1,19 @@
 <!-- The Header -->
 <%- include('components/_header') %>
 
-    <main id="site-main">
-        <div class="container">
-            <div class="box-nav d-flex justify-between">
-                <a href="/add-article" class="border-shadow">
-                    <span class="text-gradient">New article <i class="fas fa-user"></i></span>
-                </a>
-            </div>
-        </div>
+<main id="site-main">
   <div class="container">
-      <table class="table">
-        <thead class="thead-dark">
-          <tr>
-            <th>ID</th>
-          </tr>
-        </thead>
-        <tbody>
-            <% for(var i = 0; i < 3; i++) { %>
-          <tr>
-            <td>
-ddd
-            </td>
-            </tr>
-          <% } %> 
-        </tbody>
-      </table>
-  </div>
-
-    </main>
+      <h1>Weclome to Articles Blog</h1>
+      <p>Blog MVC and API by Express and Mongoose</p>
+      <br>
+      
+      <a href="/articles" class="border-shadow">
+        <span class="text-gradient"
+          >Show All Articles <i class="fas fa-angle-double-right"></i
+        ></span>
+      </a>
+    </div>
+</main>
 
 <!-- The Footer -->
 <%- include('components/_footer') %>

@@ -66,7 +66,7 @@ a {
 }
 
 #header nav {
-  background-color: #06d6a0;
+  background-color: #f3f3f3;
   padding: 1em 0;
   width: 100%;
 }
@@ -74,6 +74,9 @@ a {
     margin-inline: 1rem;
 }
 
+#header .links a:hover {
+  color: #16db93;
+}
 #site-main {
   margin-top: 6em;
   font-family: "Barlow", sans-serif;
@@ -108,7 +111,7 @@ table {
 }
 
 .table tr:hover {
-  background-color: #06d6a0;
+  background-color: #f3f3f3;
 }
 
 .table tr:hover td > a {
@@ -239,4 +242,32 @@ table {
 #add_article .form-group .btn:hover {
   background-color: var(--dark);
   color: var(--border);
+}
+
+/* article */
+
+.artciles {
+  display: flex;
+  flex-basis: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.artciles-box {
+  /* float: left; */
+  background: #fff;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0px 1px 10px 0px rgba(0,0,0, 0.4);
+  min-height: 300px;
+  width: 300px;
+  border-radius: 12px;
+}
+
+.artciles-box .image {
+  width: 100%;
+}
+.artciles-box img {
+  width: 100%;
+  height: auto;
+  object-fit: fill;
 }
