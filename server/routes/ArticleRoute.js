@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router()
 
+const upload = require('../services/uploadImg')
+
 const ArticleServices = require('../services/ArticleServices');
 const ArticleController = require('../controllers/ArticleController');
 
@@ -16,7 +18,7 @@ router.get('/details', ArticleServices.showArticle)
 
 
 // APIs
-router.post('/', ArticleController.create);
+router.post('/', upload.single('image'), ArticleController.create);
 router.get('/get-data', ArticleController.find);
 router.put('/:id', ArticleController.update);
 router.delete('/:id', ArticleController.delete);

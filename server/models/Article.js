@@ -15,7 +15,8 @@ var articleSchema = new mongoose.Schema({
         required: true
     },
     imgUrl : String,
-    status : String
+    status : String,
+    image : String
 })
 
 const Article = mongoose.model('Article', articleSchema);

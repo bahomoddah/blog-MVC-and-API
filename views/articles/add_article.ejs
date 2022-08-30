@@ -13,7 +13,8 @@
     </div>
 
     <!-- Add new Article -->
-    <form action="/articles" method="POST" id="add_article">
+
+    <form action="/articles" method="POST" id="add_article" enctype="multipart/form-data">
       <div class="new_article">
         <div class="form-group">
           <label for="title" class="text-light">Title</label>
@@ -37,6 +38,11 @@
           <label for="imgUrl" class="text-light">Image Url</label>
           <input type="text" name="imgUrl" value="" placeholder="http..." />
         </div>
+        <div class="form-group">
+          <label for="image" class="text-light">Image</label>
+          <input type="file" name="image" value=""/>
+        </div>
+
 
         <div class="form-group">
           <label for="gender" class="text-light">Status</label>
