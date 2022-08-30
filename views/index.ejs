@@ -1,40 +1,19 @@
+<!-- The Header -->
+<%- include('components/_header') %>
 
-<!-- include header -->
-<%- include('include/_header') %>
-<!-- /include header -->
+<main id="site-main">
+  <div class="container">
+      <h1>Weclome to Articles Blog</h1>
+      <p>Blog MVC and API by Express and Mongoose</p>
+      <br>
+      
+      <a href="/articles" class="border-shadow">
+        <span class="text-gradient"
+          >Show All Articles <i class="fas fa-angle-double-right"></i
+        ></span>
+      </a>
+    </div>
+</main>
 
-
-    <!-- Main Site -->
-    <main id="site-main">
-        <div class="container">
-            <div class="box-nav d-flex justify-between">
-                <a href="/add-article" class="border-shadow">
-                    <span class="text-gradient">New article <i class="fas fa-user"></i></span>
-                </a>
-            </div>
-            <form action="/" method="POST">
-                <table class="table">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th>ID</th>
-                            <th>Title</th>
-                            <th>Author</th>
-                            <th>Content</th>
-                            <th>Image</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <%- include('include/_show') %>
-                    </tbody>
-                </table>
-            </form>
-        </div>
-    </main>
-<!-- /Main Site -->
-
-
-<!-- include footer -->
-<%- include('include/_footer') %>
-<!-- /include footer -->
+<!-- The Footer -->
+<%- include('components/_footer') %>

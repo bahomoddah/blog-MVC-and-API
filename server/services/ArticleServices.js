@@ -1,11 +1,25 @@
 const axios = require('axios');
 
-
 exports.articlesRoutes = (req, res) => {
     // Make a get request to /api/articles
-    axios.get('http://localhost:3000/api/articles')
+    // const fullUrl =  req.protocol + '://' + req.get('host') + req.originalUrl;
+    const fullUrl = req.protocol + '://' + req.get('host');
+    axios.get(`${fullUrl}/articles/get-data`)
         .then((response) => {
-            res.render('index', {
+            res.render('articles', {
+                articles: response.data
+            });
+        })
+        .catch(err => {
+            res.send(err);
+        })
+}
+
+exports.articlesTable = (req, res) => {
+    const fullUrl = req.protocol + '://' + req.get('host');
+    axios.get(`${fullUrl}/articles/get-data`)
+        .then((response) => {
+            res.render('articles/table', {
                 articles: response.data
             });
         })
@@ -15,11 +29,11 @@ exports.articlesRoutes = (req, res) => {
 }
 
 exports.add_article = (req, res) => {
-    res.render('add_article');
+    res.render('articles/add_article');
 }
 
 exports.update_article = (req, res) => {
-    axios.get('http://localhost:3000/api/articles', {
+    axios.get('http://localhost:3000/articles/', {
             params: {
                 id: req.query.id
             }

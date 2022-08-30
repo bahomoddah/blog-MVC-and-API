@@ -6,9 +6,7 @@ exports.create = (req,res)=>{
     if(!req.body){
         res.status(400).send({ message : "Content can not be emtpy!"});
         return;
-    }
-    console.log("ff", req.body );
-    
+    }   
 
     // new article
     const article = new Article({
@@ -24,7 +22,7 @@ exports.create = (req,res)=>{
         .save(article)
         .then(data => {
             //res.send(data)
-            res.redirect('/add-article');
+            res.redirect('/articles/add-article');
         })
         .catch(err =>{
             res.status(500).send({

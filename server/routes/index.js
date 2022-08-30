@@ -2,9 +2,7 @@ const express = require('express');
 const router = express.Router()
 
 router.get('/', (req, res) => {
-    // res.render('/users', { title: "Users List" })
-    res.send("Users Page")
-})
-
+    res.render('index')
+});
 
 module.exports = router

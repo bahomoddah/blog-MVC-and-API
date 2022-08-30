@@ -1,0 +1,32 @@
+<!-- The Header -->
+<%- include('../components/_header') %>
+
+<main id="site-main">
+  <div class="container">
+    <div class="box-nav d-flex justify-between">
+      <a href="articles/add-article" class="border-shadow">
+        <span class="text-gradient">New article </span>
+      </a>
+    </div>
+    <div class="artciles">
+      <% for(var i = 0; i < articles.length; i++) { %>
+      <div class="artciles-box">
+        <div class="image">
+          <img
+            src="<%= articles[i].imgUrl %>"
+            width="100"
+            height="150"
+            alt=""
+          />
+        </div>
+        <h3><%= articles[i].title %></h3>
+        <small><i class="fas fa-user"></i><%= articles[i].author %></small>
+        <p><%= articles[i].content %></p>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</main>
+
+<!-- The Footer -->
+<%- include('../components/_footer') %>
