@@ -47,3 +47,19 @@ exports.update_article = (req, res) => {
             res.send(err);
         })
 }
+
+exports.showArticle = (req, res) => {
+    // Make a get request to /api/articles
+    const fullUrl = req.protocol + '://' + req.get('host');
+    console.log("ccc", req.query.id);
+    axios.get(`${fullUrl}/articles/get-data?id${id= req.query.id}`)
+        .then((response) => {
+            res.render('articles/details', {
+                article: response.data[0]
+            });
+        })
+        .catch(err => {
+            res.send(err);
+        })
+
+}
