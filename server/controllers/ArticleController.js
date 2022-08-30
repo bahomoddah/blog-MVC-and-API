@@ -14,7 +14,8 @@ exports.create = (req,res)=>{
         author : req.body.author,
         content : req.body.content,
         imgUrl: req.body.imgUrl,
-        status : req.body.status
+        status : req.body.status,
+        image: req.file.filename
     })
 
     // save article in the database

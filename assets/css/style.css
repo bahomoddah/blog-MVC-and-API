@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&display=swap");
-@import 'table-style.css';
+@import "table-style.css";
 
 :root {
   --dark: #2b2d42;
@@ -72,7 +72,7 @@ a {
   width: 100%;
 }
 #header .links a {
-    margin-inline: 1rem;
+  margin-inline: 1rem;
 }
 
 #header .links a:hover {
@@ -194,20 +194,66 @@ a {
   justify-content: center;
 }
 .artciles-box {
-  background: #fff;
+  background: #2b2d42;
   padding: 10px;
   margin: 10px;
-  box-shadow: 0px 1px 10px 0px rgba(0,0,0, 0.4);
-  min-height: 300px;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.4);
+  min-height: 340px;
   width: 300px;
   border-radius: 12px;
 }
-
 .artciles-box .image {
   width: 100%;
+  height: 250px;
 }
 .artciles-box img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  padding: 10px;
+  max-height: 250px;
+}
+
+.artciles-box div {
+  color: #f3f3f3;
+}
+.artciles-box div h2 {
+  color: #f3f3f3;
+  margin-block: 6px;
+}
+.artciles-box div i {
+  margin-right: 5px;
+}
+.artciles-box div p {
+  margin-block: 10px;
+  min-height: 80px;
+}
+.artciles-box div small {
+  color: #16db93;
+}
+.details-btn {
+  padding: 6px 15px;
+  background-color: #16db93;
+  border: 1px solid #16db93;
+  color: var(--dark);
+  border-radius: 8px;
+  float: right;
+}
+.details-btn:hover {
+  color: #fff;
+}
+.details .artciles-box {
+  min-height: 380px;
+  width: 60%;
+  margin-inline: auto;
+}
+.artciles-box .image {
+  width: 100%;
   height: auto;
+}
+.details .artciles-box img {
+  height: auto;
+  max-height: 300px;
   object-fit: fill;
 }
