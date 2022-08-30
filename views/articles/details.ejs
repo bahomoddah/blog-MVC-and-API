@@ -1,0 +1,31 @@
+<!-- The Header -->
+<%- include('../components/_header') %>
+
+<main id="site-main" class="details">
+  <div class="container">
+    <div class="box-nav d-flex justify-between">
+      <div class="filter">
+        <a href="/articles"><i class="fas fa-angle-double-left"></i> All Articles</a>
+      </div>
+    </div>
+    <div>
+      <article class="artciles-box">
+        <div class="image">
+          <img
+            src="<%= article.imgUrl %>"
+            alt=""
+          />
+        </div>
+        <div>
+          <h2><%= article.title %></h2>
+          <span><i class="fas fa-user"></i><%= article.author %></span>
+          <small><i class="fas fa-time"></i>28/8/2022</small>
+          <p><%= article.content %></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</main>
+
+<!-- The Footer -->
+<%- include('../components/_footer') %>

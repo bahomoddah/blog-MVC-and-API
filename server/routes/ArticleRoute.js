@@ -12,6 +12,8 @@ router.get('/add-article', ArticleServices.add_article)
 
 router.get('/update-article', ArticleServices.update_article)
 
+router.get('/details', ArticleServices.showArticle)
+
 
 // APIs
 router.post('/', ArticleController.create);
