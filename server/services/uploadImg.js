@@ -1,12 +1,16 @@
 
 const multer = require('multer');
+const { v4: uuidv4 } = require('uuid');
 
 const storage = multer.diskStorage({
   destination: function(req, file, cb) {
     cb(null, './assets/imgs/uploads/');
   },
   filename: function(req, file, cb) {
-    cb(null,file.originalname);
+    
+    // Ways to rename image file in server
+    cb(null, uuidv4() + file.originalname);
+    // cb(null,file.originalname);
     // cb(null, new Date().toISOString() + file.originalname);
   }
 });
