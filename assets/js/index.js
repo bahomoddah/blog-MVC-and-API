@@ -19,27 +19,27 @@ $("#update_article").submit(function(event){
     }
 
     $.ajax(request).done(function(response){
-        alert("Data Updated Successfully!");
+        // alert("Data Updated Successfully!");
     })
 
 })
 
-if(window.location.pathname == "/"){
-    $ondelete = $(".table tbody td a.delete");
+// if(window.location.pathname == "/"){
+    $ondelete = $("a.delete");
     $ondelete.click(function(){
         var id = $(this).attr("data-id")
 
         var request = {
-            "url" : `http://localhost:3000/api/articles/${id}`,
+            "url" : `http://localhost:3000/articles/${id}`,
             "method" : "DELETE"
         }
 
         if(confirm("Do you really want to delete this record?")){
             $.ajax(request).done(function(response){
-                alert("Data Deleted Successfully!");
+                // alert("Data Deleted Successfully!");
                 location.reload();
             })
         }
 
     })
-}
+// }
