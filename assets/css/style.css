@@ -194,7 +194,7 @@ a {
   justify-content: center;
 }
 .artciles-box {
-  background: #2b2d42;
+  background: #fff;
   padding: 10px;
   margin: 10px;
   box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.4);
@@ -212,14 +212,13 @@ a {
   object-fit: cover;
   border-radius: 20px;
   padding: 10px;
-  max-height: 250px;
 }
 
 .artciles-box div {
-  color: #f3f3f3;
+  color: #000;
 }
 .artciles-box div h2 {
-  color: #f3f3f3;
+  color: #2b2d42;
   margin-block: 6px;
 }
 .artciles-box div i {
@@ -248,7 +247,7 @@ a {
   width: 60%;
   margin-inline: auto;
 }
-.artciles-box .image {
+.details .artciles-box .image {
   width: 100%;
   height: auto;
 }
